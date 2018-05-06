@@ -1,0 +1,26 @@
+user document
+{
+	userId,
+	userName,
+	shopName	
+}
+
+shop document
+{
+	shopId,
+	shopName,
+	shopUrl,
+	shopAddress,
+	byUser,
+	numberOfProducts
+}
+	
+product document
+{
+	productId,
+	productName,
+	productKeywords,
+	sellingPrice,
+	originalPrice,
+	byShop
+}
