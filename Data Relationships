@@ -1,26 +1,39 @@
 user document
 {
-	userId,
-	userName,
-	shopName	
+	"mobileNo" : Integer, //KEY
+	"userId" : Integer, 
+	"userName" : String,
+	"shopId" : Integer,
+	"profilePhoto" : 	
 }
 
 shop document
 {
-	shopId,
-	shopName,
-	shopUrl,
-	shopAddress,
-	byUser,
-	numberOfProducts
+	"shopId" : Integer, //KEY
+	"shopName" : String,
+	"shopEmail" : String,
+	"shopUrl" : String,
+	"shopAddress" : {
+		"Address": String,
+		"City": String,
+		"Landmark": String,
+		"State": String
+		"Country" : String
+		"PostalCode" : Integer
+	}, 
+	"shopPhone" : Integer
+	"byUser" : String (userId),	//Owner of Shop
+	"products" : [ "Array of productId" ] //List of products a shop has
 }
 	
 product document
 {
-	productId,
-	productName,
-	productKeywords,
-	sellingPrice,
-	originalPrice,
-	byShop
+	"productId" : Integer,
+	"productName" : String,
+	"productDesc" : String,
+	"productCategory" : [ Array of Strings ], 
+	"sellingPrice" : Integer,
+	"originalPrice" : Integer,
+	"byShop" : Integer (shopId), //Product owned by which Shop...
+	"productPhoto" : 
 }
